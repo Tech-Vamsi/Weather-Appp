@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="./css/style.css">
+     
+        </head>
+        <body>
+              <h1>Weather</h1>
+            {{>header}}
+        
+          <p>{{error}}</p>
+          <form>
+              <input type="text" placeholder="Enter address" name='address'/>
+              <button>Fetch Weather</button>
+          </form>
+
+    <p><b>Summary:</b> {{summary}}
+        <br>
+    <b>Temperature:</b> {{temp}}
+    <br>
+    <b>Preciitation Probability:</b> {{prob}}
+    </p>
+    {{>footer}}
+ 
+     <!--<script src='/js/app.js'></script>-->
+        </body>
+</html>
