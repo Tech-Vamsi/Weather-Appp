@@ -7,6 +7,7 @@ const weather=require('./util/weather')
 const bodyParser=require('body-parser')
 console.log(path.join(__dirname,'..public'))
 const app=express();
+const port=process.env.PORT||3000
 const publicDir=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views')
 const partialPath=path.join(__dirname,'../templates/partials')
@@ -113,6 +114,6 @@ app.get('/about/*',(req,res)=>{
 app.get('*',(req,res)=>{
 res.send('404 Page')
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Sever is up on port 3000')
 })
